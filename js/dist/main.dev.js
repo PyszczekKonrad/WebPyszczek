@@ -1,41 +1,39 @@
+"use strict";
 
 //header text 
-window.addEventListener('scroll', () => {
-    const movingText = document.getElementById("movingText");
-    const scrolled = window.pageYOffset;
-    const left = scrolled * 3;
-  
-    movingText.style.transform = `translate3d(-${left}px, 0px, 0px)`;
-  })
+window.addEventListener('scroll', function () {
+  var movingText = document.getElementById("movingText");
+  var scrolled = window.pageYOffset;
+  var left = scrolled * 3;
+  movingText.style.transform = "translate3d(-".concat(left, "px, 0px, 0px)");
+}); // date for footer
 
-// date for footer
-const footerYear = document.querySelector('.footer__year')
+var footerYear = document.querySelector('.footer__year');
 
-const handlePresentYear = () => {
-    const year = (new Date).getFullYear();
-    footerYear.innerText = year  
-}
-handlePresentYear();
+var handlePresentYear = function handlePresentYear() {
+  var year = new Date().getFullYear();
+  footerYear.innerText = year;
+};
 
-//navigation scroll
-document.addEventListener('DOMContentLoaded', function() {
+handlePresentYear(); //navigation scroll
+
+document.addEventListener('DOMContentLoaded', function () {
   var nav = document.querySelector('.nav');
   var navItems = document.querySelectorAll('.nav__item');
 
   function changeNavTextColor() {
     var scrollPosition = window.scrollY;
-
-  
-    var isMobile = window.innerWidth <= 768; 
+    var isMobile = window.innerWidth <= 768;
 
     for (var i = 0; i < navItems.length; i++) {
       var navItem = navItems[i];
 
       if (isMobile) {
-        nav.style.backgroundColor = 'rgb(2, 137, 173)'; 
+        nav.style.backgroundColor = 'rgb(2, 137, 173)';
         navItem.style.color = 'white';
       } else {
-        nav.style.backgroundColor = ''; 
+        nav.style.backgroundColor = '';
+
         if (scrollPosition > 3605) {
           navItem.style.color = '';
         } else if (scrollPosition > 2816) {
@@ -56,31 +54,25 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   window.addEventListener('scroll', changeNavTextColor);
-});
+}); //form contact
 
-//form contact
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-  event.preventDefault(); 
-
+document.getElementById('contactForm').addEventListener('submit', function (event) {
+  event.preventDefault();
   var name = document.getElementById('name').value;
   var email = document.getElementById('email').value;
   var message = document.getElementById('message').value;
-
-
   document.getElementById('contactForm').reset();
-
   alert('Sent message!');
-});
+}); //animation for section info 
 
-//animation for section info 
-window.addEventListener('scroll', () => {
-  const movingTitle = document.getElementById("movingTitle");
-  const scrolled = window.pageYOffset;
-  const startScroll = 240;
-  const maxScroll = 900; 
-  let right = 0;
+window.addEventListener('scroll', function () {
+  var movingTitle = document.getElementById("movingTitle");
+  var scrolled = window.pageYOffset;
+  var startScroll = 240;
+  var maxScroll = 900;
+  var right = 0;
 
-  if (window.innerWidth >= 576) { 
+  if (window.innerWidth >= 576) {
     if (scrolled >= startScroll && scrolled <= maxScroll) {
       right = (scrolled - startScroll) * 1;
     } else if (scrolled > maxScroll) {
@@ -88,29 +80,23 @@ window.addEventListener('scroll', () => {
     }
   }
 
-  movingTitle.style.transform = `translate3d(+${right}px, 0px, 0px)`;
-});
+  movingTitle.style.transform = "translate3d(+".concat(right, "px, 0px, 0px)");
+}); //card animation for mobile 
 
-//card animation for mobile 
-const handleBox = document.getElementById('view__box');
-let lastTouchTime = 0;
+var handleBox = document.getElementById('view__box');
+var lastTouchTime = 0;
+handleBox.addEventListener('touchstart', function (event) {
+  var currentTime = new Date().getTime();
+  var timeDiff = currentTime - lastTouchTime;
 
-handleBox.addEventListener('touchstart', function(event) {
-  const currentTime = new Date().getTime();
-  const timeDiff = currentTime - lastTouchTime;
-
-  if (timeDiff < 300) { 
-
-    viewBox.classList.toggle('view__box--mobile'); 
+  if (timeDiff < 300) {
+    viewBox.classList.toggle('view__box--mobile');
   }
 
   lastTouchTime = currentTime;
 });
-
 /**
  * ----------------------------------------
  * Konrad Kukałowicz - author
  * ----------------------------------------
  */
-
-

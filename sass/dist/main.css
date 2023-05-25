@@ -14,10 +14,10 @@
   text-align: center;
   text-transform: uppercase;
   font-size: 4.8rem;
-  color: rgb(138, 185, 230);
+  color: #8ab9e6;
 }
 .section-title-decor {
-  border-bottom: 2px solid rgb(138, 185, 230);
+  border-bottom: 2px solid #8ab9e6;
 }
 
 .nav .nav-fixed {
@@ -260,7 +260,7 @@ body {
 }
 
 .view {
-  background-color: rgb(38, 51, 64);
+  background-color: #263340;
 }
 .view__boxes {
   padding: 2em;
@@ -314,7 +314,7 @@ body {
   background-position: center;
   background-size: cover;
   opacity: 0;
-  color: rgb(138, 185, 230);
+  color: #8ab9e6;
   transition: transform 1s, opacity 1s;
 }
 .view__box-text--first {
@@ -416,7 +416,7 @@ body {
   font-weight: bold;
   font-size: 2.8rem;
   margin-bottom: 0.5em;
-  color: rgb(138, 185, 230);
+  color: #8ab9e6;
 }
 .contact__form-box textarea {
   margin-bottom: 0.5em;
@@ -431,7 +431,7 @@ body {
   padding: 1em;
   width: 100%;
   max-width: 300px;
-  color: rgb(77, 103, 128);
+  color: #4d6780;
   border: none;
   border-radius: 8px;
   text-transform: uppercase;
@@ -440,7 +440,7 @@ body {
   transition: background-color 0.4s, color 0.5s;
 }
 .contact__form-btn:hover {
-  background-color: rgb(77, 103, 128);
+  background-color: #4d6780;
   color: #fff;
 }
 
@@ -449,7 +449,7 @@ body {
   justify-content: space-around;
   align-items: center;
   width: 100vw;
-  background: rgb(77, 103, 128);
+  background: #4d6780;
   padding: 20px;
   padding-bottom: 40px;
 }
@@ -534,17 +534,20 @@ body {
     padding: 2em 0;
     font-size: 5.4rem;
   }
+
   .section {
     padding: 6em 2em;
   }
+
   .nav .nav__item:hover::before {
     position: absolute;
     bottom: 19px;
     content: "";
     height: 2px;
     width: 40%;
-    background-color: rgb(2, 137, 173);
+    background-color: #0289ad;
   }
+
   .contact__form {
     gap: 40px;
   }
@@ -564,14 +567,16 @@ body {
     grid-row: 3/4;
   }
   .contact__form-box label,
-  .contact__form-box input,
-  .contact__form-box textarea {
+.contact__form-box input,
+.contact__form-box textarea {
     padding: 1em;
   }
+
   .hobby__boxes {
     flex-direction: row;
     justify-content: space-between;
   }
+
   .info__about-title {
     top: 25%;
     right: 90%;
@@ -582,15 +587,18 @@ body {
   html {
     scroll-padding-top: 30px;
   }
+
   .nav__item {
     font-size: 1.8rem;
   }
+
   .header__text {
     padding-top: 2em;
   }
   .header__container {
     padding-top: 8em;
   }
+
   .view__boxes {
     padding: 3em;
     flex-direction: column;
@@ -600,6 +608,7 @@ body {
     width: 400px;
     height: 500px;
   }
+
   .info__about {
     padding: 2em 0;
   }
@@ -611,6 +620,7 @@ body {
   .info__about-text {
     font-size: 1.4rem;
   }
+
   .hobby__box {
     transition: transform 1.4s ease;
     animation: none;
@@ -627,6 +637,7 @@ body {
   .nav__item:hover::before {
     bottom: 6px;
   }
+
   .info__about {
     flex-direction: column;
     padding: 0.5em;
@@ -645,10 +656,12 @@ body {
     width: 70vw;
     height: 70vh;
   }
+
   .section-title {
     padding: 1em 0;
     font-size: 2.8rem;
   }
+
   .view__box {
     padding: 1em;
     width: 300px;
@@ -668,6 +681,7 @@ body {
     padding: 1em;
     font-size: 2.4rem;
   }
+
   .footer-btn {
     padding: 0.1em;
   }
@@ -689,4 +703,4 @@ body {
  * ----------------------------------------
  * Konrad Kukałowicz - author
  * ----------------------------------------
- *//*# sourceMappingURL=main.css.map */
+ */

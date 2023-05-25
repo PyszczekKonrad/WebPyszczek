@@ -248,11 +248,14 @@ body {
     }
 }
 
+.view__box--mobile {
+    transform: scale(0.8);
+}
+
 //HOBBY 
 .hobby {
 
     &__boxes {
-        
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -595,6 +598,17 @@ body {
                 font-size: 1.4rem;
             }
         }  
+    }
+    .hobby {
+        
+        &__box {
+            transition: transform 1.4s ease;
+            animation: none;
+        
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
     } 
 }
 
@@ -602,12 +616,12 @@ body {
     .nav {
     
         &__item {
-            padding: 0 0.2em;
+            padding: 0.3em;
             font-size: 1.6rem;
 
             &:hover{
                 &::before {
-                    bottom: -1px;
+                    bottom: 6px;
                 }
             }
         }
@@ -620,19 +634,20 @@ body {
         padding: 0.5em;
 
             &-title {
-            padding: 0.5em 0 1em;
+            padding: 0.5em;
+            margin-left:3em;
             position: relative;
-            font-size: 2.8rem;
+            font-size: 3.2rem;
             }   
     
             &-text {
                 padding: 1em;
-                font-size: 1rem;
+                font-size: 1.1rem;
             }
 
             &-img {
-                width: 40vw;
-                height: 40vh;     
+                width: 70vw;
+                height: 70vh;     
             }
         }  
     }
