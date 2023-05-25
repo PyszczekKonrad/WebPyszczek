@@ -316,15 +316,15 @@ body {
 }
 .view__box-text--first {
   transform: rotateY(-180deg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../image/building.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../image/building_mobile.jpg");
 }
 .view__box-text--second {
   transform: rotateX(-180deg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../image/building2.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../image/building2_mobile.jpg");
 }
 .view__box-text--third {
   transform: rotate3d(0);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../image/building3.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../image/building3_mobile.jpg");
 }
 .view__box-img {
   width: 100%;
@@ -335,13 +335,13 @@ body {
   transition: transform 1s, opacity 1s;
 }
 .view__box-img--one {
-  background-image: url("../image/building.jpg");
+  background-image: url("../image/building_mobile.jpg");
 }
 .view__box-img--two {
-  background-image: url("../image/building2.jpg");
+  background-image: url("../image/building2_mobile.jpg");
 }
 .view__box-img--three {
-  background-image: url("../image/building3.jpg");
+  background-image: url("../image/building3_mobile.jpg");
 }
 
 .hobby__boxes {
@@ -378,7 +378,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../image/bg_contact.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../image/bg_contact_mobile.jpg");
 }
 .contact__form {
   display: grid;
@@ -434,6 +434,10 @@ body {
 .contact__form-btn:hover {
   background-color: #4d6780;
   color: #fff;
+}
+.contact .message {
+  display: none;
+  text-transform: uppercase;
 }
 
 .footer {
@@ -545,6 +549,31 @@ body {
     background-attachment: fixed;
   }
 
+  .view-text--first {
+    transform: rotateY(-180deg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../image/building.jpg");
+  }
+  .view-text--second {
+    transform: rotateX(-180deg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../image/building2.jpg");
+  }
+  .view-text--third {
+    transform: rotate3d(0);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../image/building3.jpg");
+  }
+  .view-text-img--one {
+    background-image: url("../image/building.jpg");
+  }
+  .view-text-img--two {
+    background-image: url("../image/building2.jpg");
+  }
+  .view-text-img--three {
+    background-image: url("../image/building3.jpg");
+  }
+
+  .contact {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../image/bg_contact.jpg");
+  }
   .contact__form {
     gap: 40px;
   }

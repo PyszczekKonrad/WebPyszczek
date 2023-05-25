@@ -67,9 +67,9 @@ document.getElementById('contactForm').addEventListener('submit', function (even
     from_email: email,
     message: message
   }).then(function (response) {
-    alert('Send succeed!');
+    document.getElementById('messageSent').style.display = 'block';
   }, function (error) {
-    console.error('Send fail:', error);
+    console.error('Fail Send', error);
   });
 }); //animation for section info 
 

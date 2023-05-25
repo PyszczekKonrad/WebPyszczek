@@ -69,17 +69,18 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 
   document.getElementById('contactForm').reset();
 
-
+  
   emailjs.send('service_z7oyfvi', 'ttemplate_o8vl1tgf', {
     from_name: name,
     from_email: email,
     message: message
   }).then(function(response) {
-    alert('Send succeed!');
+    document.getElementById('messageSent').style.display = 'block';
   }, function(error) {
-    console.error('Send fail:', error);
+    console.error('Fail Send', error);
   });
 });
+
 
 
 //animation for section info 
