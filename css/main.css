@@ -581,9 +581,6 @@ body {
   .nav__item {
     font-size: 1.8rem;
   }
-  .header {
-    background-image: url("../image/hero_bg-mobile.jpg");
-  }
   .header__text {
     padding-top: 2em;
   }
@@ -624,7 +621,7 @@ body {
     padding: 0.5em;
   }
   .info__about-title {
-    padding: 0.5em;
+    padding: 0.5em 0 1em;
     position: relative;
     font-size: 2.8rem;
   }
@@ -633,10 +630,8 @@ body {
     font-size: 1rem;
   }
   .info__about-img {
-    width: 60vw;
-    height: 60vh;
-    top: 20%;
-    left: -18%;
+    width: 40vw;
+    height: 40vh;
   }
   .section-title {
     padding: 1em 0;
