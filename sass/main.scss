@@ -62,6 +62,7 @@ body {
     align-items: center;
     flex-direction: column;
     height:100%;
+    width: 100%;
     padding: 2em;
     background-image: url('../image/hero_bg_mobile.jpg');
     background-attachment: fixed;
@@ -643,8 +644,8 @@ body {
             }
 
             &-img {
-                width: 60vw;
-                height: 60vh;     
+                width: 70vw;
+                height: 70vh;     
             }
         }  
     }
