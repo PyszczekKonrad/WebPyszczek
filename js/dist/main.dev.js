@@ -62,7 +62,7 @@ document.getElementById('contactForm').addEventListener('submit', function (even
   var email = document.getElementById('email').value;
   var message = document.getElementById('message').value;
   document.getElementById('contactForm').reset();
-  emailjs.send('service_z7oyfvi', 'template_e6n5u7f', {
+  emailjs.send('service_z7oyfvi', 'ttemplate_o8vl1tgf', {
     from_name: name,
     from_email: email,
     message: message
