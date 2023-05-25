@@ -91,21 +91,6 @@ window.addEventListener('scroll', () => {
   movingTitle.style.transform = `translate3d(+${right}px, 0px, 0px)`;
 });
 
-//card animation for mobile 
-const handleBox = document.getElementById('view__box');
-let lastTouchTime = 0;
-
-handleBox.addEventListener('touchstart', function(event) {
-  const currentTime = new Date().getTime();
-  const timeDiff = currentTime - lastTouchTime;
-
-  if (timeDiff < 300) { 
-
-    viewBox.classList.toggle('view__box--mobile'); 
-  }
-
-  lastTouchTime = currentTime;
-});
 
 /**
  * ----------------------------------------

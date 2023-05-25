@@ -81,19 +81,6 @@ window.addEventListener('scroll', function () {
   }
 
   movingTitle.style.transform = "translate3d(+".concat(right, "px, 0px, 0px)");
-}); //card animation for mobile 
-
-var handleBox = document.getElementById('view__box');
-var lastTouchTime = 0;
-handleBox.addEventListener('touchstart', function (event) {
-  var currentTime = new Date().getTime();
-  var timeDiff = currentTime - lastTouchTime;
-
-  if (timeDiff < 300) {
-    viewBox.classList.toggle('view__box--mobile');
-  }
-
-  lastTouchTime = currentTime;
 });
 /**
  * ----------------------------------------

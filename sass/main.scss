@@ -61,7 +61,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
+    height: 90vh;
     padding: 2em;
     background-image: url('../image/hero_bg.jpg');
     background-attachment: fixed;
@@ -246,10 +246,6 @@ body {
             }
         }
     }
-}
-
-.view__box--mobile {
-    transform: scale(0.8);
 }
 
 //HOBBY 
@@ -561,12 +557,14 @@ body {
     }
 
     .header {
+        background-image: url('../image/hero_bg_mobile.jpg');
+
         &__text {
             padding-top: 2em;
         }
 
         &__container {
-            padding-top: 8em;
+            padding-top: 7em;
         }
     }
 
@@ -631,7 +629,7 @@ body {
 
         &__about {
         flex-direction: column;
-        padding: 0.5em;
+        padding: 0.5em 0;
 
             &-title {
             padding: 0.5em;
@@ -646,8 +644,8 @@ body {
             }
 
             &-img {
-                width: 70vw;
-                height: 70vh;     
+                width: 60vw;
+                height: 60vh;     
             }
         }  
     }

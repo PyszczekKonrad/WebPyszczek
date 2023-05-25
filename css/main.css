@@ -191,7 +191,7 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  height: 90vh;
   padding: 2em;
   background-image: url("../image/hero_bg.jpg");
   background-attachment: fixed;
@@ -345,10 +345,6 @@ body {
 }
 .view__box-img--three {
   background-image: url("../image/building3.jpg");
-}
-
-.view__box--mobile {
-  transform: scale(0.8);
 }
 
 .hobby__boxes {
@@ -585,11 +581,14 @@ body {
   .nav__item {
     font-size: 1.8rem;
   }
+  .header {
+    background-image: url("../image/hero_bg_mobile.jpg");
+  }
   .header__text {
     padding-top: 2em;
   }
   .header__container {
-    padding-top: 8em;
+    padding-top: 7em;
   }
   .view__boxes {
     padding: 3em;
@@ -629,7 +628,7 @@ body {
   }
   .info__about {
     flex-direction: column;
-    padding: 0.5em;
+    padding: 0.5em 0;
   }
   .info__about-title {
     padding: 0.5em;
@@ -642,8 +641,8 @@ body {
     font-size: 1.1rem;
   }
   .info__about-img {
-    width: 70vw;
-    height: 70vh;
+    width: 60vw;
+    height: 60vh;
   }
   .section-title {
     padding: 1em 0;
