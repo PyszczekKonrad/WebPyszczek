@@ -69,8 +69,18 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 
   document.getElementById('contactForm').reset();
 
-  alert('Sent message!');
+ 
+  emailjs.send('service_z7oyfvi', 'template_e6n5u7f', {
+    from_name: name,
+    from_email: email,
+    message: message
+  }).then(function(response) {
+    alert('Send succeed!');
+  }, function(error) {
+    console.error('Send fail:', error);
+  });
 });
+
 
 //animation for section info 
 window.addEventListener('scroll', () => {

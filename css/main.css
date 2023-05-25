@@ -191,9 +191,9 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 90vh;
+  height: 100%;
   padding: 2em;
-  background-image: url("../image/hero_bg.jpg");
+  background-image: url("../image/hero_bg_mobile.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -226,8 +226,6 @@ body {
   position: relative;
   padding: 6em 0;
   display: flex;
-  align-items: end;
-  flex-direction: row;
 }
 .info__about-title {
   position: absolute;
@@ -242,7 +240,7 @@ body {
 .info__about-text {
   display: flex;
   justify-content: end;
-  align-items: center;
+  align-items: flex-end;
   padding: 1em;
   font-size: 2.4rem;
 }
@@ -271,8 +269,8 @@ body {
 .view__box {
   position: relative;
   margin: 10px 20px;
-  width: 550px;
-  height: 650px;
+  width: 450px;
+  height: 550px;
   perspective: 800px;
   cursor: pointer;
   transition: 0.8s;
@@ -541,6 +539,9 @@ body {
     width: 40%;
     background-color: rgb(2, 137, 173);
   }
+  .header {
+    background-image: url("../image/hero_bg.jpg");
+  }
   .contact__form {
     gap: 40px;
   }
@@ -580,9 +581,6 @@ body {
   }
   .nav__item {
     font-size: 1.8rem;
-  }
-  .header {
-    background-image: url("../image/hero_bg_mobile.jpg");
   }
   .header__text {
     padding-top: 2em;
