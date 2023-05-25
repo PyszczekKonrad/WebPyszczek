@@ -70,7 +70,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
   document.getElementById('contactForm').reset();
 
   
-  emailjs.send('service_z7oyfvi', 'ttemplate_o8vl1tgf', {
+  emailjs.send('service_z7oyfvi', '__ejs-test-mail-service__', {
     from_name: name,
     from_email: email,
     message: message
