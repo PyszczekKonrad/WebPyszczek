@@ -191,11 +191,9 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
   padding: 2em;
   background-image: url("../image/hero_bg_mobile.jpg");
-  background-attachment: fixed;
   background-position: center;
   background-size: cover;
   color: #fff;
@@ -220,7 +218,7 @@ body {
   justify-content: flex-end;
   font-size: 3.3rem;
   color: #fff;
-  animation: bounce-in-bottom 10.2s forwards;
+  animation: bounce-in-bottom 11.2s forwards;
 }
 
 .info__about {
@@ -359,7 +357,6 @@ body {
   width: 200px;
   text-align: center;
   overflow: hidden;
-  perspective: 1000px;
   cursor: pointer;
   transition: transform 1.4s ease;
   animation: tilt-in-bottom-2 1s;
@@ -542,6 +539,7 @@ body {
   }
   .header {
     background-image: url("../image/hero_bg.jpg");
+    background-attachment: fixed;
   }
   .contact__form {
     gap: 40px;
