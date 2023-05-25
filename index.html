@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB Pyszczek</title>
+    <link rel="icon" type="image/png" href="./icon/technical-support.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cinzel:wght@400;700&family=Cookie&family=Kaushan+Script&family=Lobster+Two&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+<nav class="nav">
+         <a href="#" class="nav nav__item">Web Pyszczek</a>
+         <a href="#info" class="nav nav__item">info</a>
+         <a href="#gallery" class="nav nav__item">gallery</a>
+         <a href="#contact" class="nav nav__item">contact</a>
+</nav>
+
+<header class="header section">
+        <div class="header__container">
+            <h1 class="header__title" id="movingText">WEB Pyszczek WEB Pyszczek WEB Pyszczek WEB Pyszczek</h1>
+        </div>
+        <div class="header__text"><p>welcome! scroll</p></div>
+</header>
+
+
+
+<main class="main">
+
+<section class="info section" id="info">
+   
+    <div class="wrapper">
+        <div class="info__about"> 
+            <div class="info__about-img">
+            <img src="image/konrad.png" alt="my photo" class="info__img">
+            </div>
+            <h2 class="info__about-title" id="movingTitle">kukałowicz konrad</h2>
+            <div class="info__about-text">
+                <p >I'm a creative front-end developer focused on creating functional. I'm an active team player, and I always do my best to engage the team with my work progress at every stage of development.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="view section" id="gallery">
+    <div class="wrapper">
+
+        <h2 class="section-title">gallery of<span class="section-title-decor"> work</span></h2>
+        <div class="view__boxes">
+
+            <div class="view__box">
+                <div class="view__box-img view__box-img--one" onclick="void(0)"></div>
+                <div class="view__box-text view__box-text--first"><p>nice card 1</p></div>    
+            </div>
+
+            <div class="view__box">
+                <div class="view__box-img view__box-img--two" onclick="void(0)"></div>
+                 <div class="view__box-text view__box-text--second"><p>nice card 2</p></div>    
+            </div>
+
+            <div class="view__box">
+                <div class="view__box-img view__box-img--three" onclick="void(0)"></div>
+                <div class="view__box-text view__box-text--third"><p>nice card 3</p></div>    
+            </div>
+    </div>
+</section>
+
+<section class="hobby section">
+    <h2 class="section-title">my<span class="section-title-decor"> hobby</span></h2>
+<div class="wrapper">
+    <div class="hobby__boxes">
+        <div class="hobby__box">
+            <img src="./icon/football.png" alt="" class="hobby__box-img">
+            <h5 class="hobby__box-title">football</h5>
+        </div>
+        <div class="hobby__box">
+            <img src="./icon/dog-in-front-of-a-man.png" alt="" class="hobby__box-img">
+            <h5 class="hobby__box-title">dogs</h5>
+        </div>
+        <div class="hobby__box">
+            <img src="./icon/vegetable.png" alt="" class="hobby__box-img">
+            <h5 class="hobby__box-title">vege food</h5>
+        </div>
+        <div class="hobby__box">
+            <img src="./icon/digital-transformation.png" alt="" class="hobby__box-img">
+            <h5 class="hobby__box-title">technology</h5>
+        </div>
+   
+    </div>
+</div>    
+</section>
+
+<section class="contact section" id="contact">
+    <h2 class="section-title"><span class="section-title-decor">contact</span></h2>
+    <div class="wrapper">
+        <form id="contactForm" class="contact__form">
+            <div class="contact__form-box contact__form-box--one">
+                <label  for="name">Name:</label>
+                <input  type="text" id="name" name="name" required>
+            </div>
+            <div class="contact__form-box contact__form-box--two">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="contact__form-box contact__form-box--three">
+                <label  for="message">Message:</label>
+                <textarea  id="message" name="message" required></textarea>
+            </div>
+            <button class="contact__form-btn" type="submit">Sent</button>
+          </form>
+    </div>    
+</section>
+
+
+<footer class="footer">
+    <div class="footer__btn">
+         <a href="#" class="footer__bottom-btn"><span class="footer__bottom-btn--one">
+            <img src="./icon/arrow-up.svg" alt=""></span><span class="footer__bottom-btn--two">
+                <img src="./icon/arrow-up.svg" alt=""></span>
+        </a>
+    </div>
+    <div class="footer__years">
+        <p class="footer__bottom-text"> &copy; <span class="footer__year"></span> WEB PYSZCZEK</p>
+    </div>
+    <div class="footer__social">
+        <a href="mailto:konrad.kukalowicz79@gmail.com" class="footer__social-item"><img src="./icon/at-sign.svg" alt=""></a>
+        <a href="https://www.facebook.com/konrad.kukalowicz/" target="_blank" class="footer__social-item"><img src="./icon/facebook.svg" alt=""></a>
+        <a href="https://www.linkedin.com/in/konrad-kukałowicz-373b6213b/" target="_blank" class="footer__social-item"><img src="./icon/linkedin.svg" alt=""> </a>
+    </div>
+</footer>
+
+</main>
+    <script src="./js/main.js"></script>
+</body>
+</html>
+
+<!-- Author: Konrad Kukałowicz -->
