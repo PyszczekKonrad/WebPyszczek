@@ -246,8 +246,8 @@ body {
 .info__about-img {
   width: 250vw;
   height: 500px;
-  border: 5px solid black;
-  border-right: none;
+  border-bottom: 5px solid black;
+  border-left: 5px solid black;
   object-fit: cover;
   overflow: hidden;
 }
@@ -681,6 +681,7 @@ body {
   .info__about-img {
     width: 80vw;
     height: 60vh;
+    border-left: none;
   }
 
   .section-title {

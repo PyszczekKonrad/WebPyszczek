@@ -124,8 +124,8 @@ body {
         &-img{
             width:250vw;
             height: 500px;
-            border: 5px solid black ;
-            border-right: none;
+            border-bottom: 5px solid black;
+            border-left:  5px solid black;
             object-fit:cover ;
             overflow: hidden;
         }   
@@ -492,6 +492,7 @@ body {
     .header {
         background-image: url('../image/hero_bg.jpg');
         background-attachment: fixed;
+
     }
     .view {
         &-text {
@@ -680,7 +681,8 @@ body {
 
             &-img {
                 width: 80vw;
-                height: 60vh;     
+                height: 60vh; 
+                border-left:  none;
             }
         }  
     }
