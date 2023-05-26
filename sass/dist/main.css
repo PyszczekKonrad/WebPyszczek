@@ -272,31 +272,6 @@ body {
   height: 550px;
   perspective: 800px;
   cursor: pointer;
-  transition: 0.8s;
-}
-.view__box:hover .view__box-img--one {
-  transform: rotateY(180deg);
-  opacity: 0;
-}
-.view__box:hover .view__box-text--first {
-  transform: rotateY(0);
-  opacity: 1;
-}
-.view__box:hover .view__box-img--two {
-  transform: rotateX(180deg);
-  opacity: 0;
-}
-.view__box:hover .view__box-text--second {
-  transform: rotateX(0);
-  opacity: 1;
-}
-.view__box:hover .view__box-img--three {
-  transform: rotate3d(0);
-  opacity: 0;
-}
-.view__box:hover .view__box-text--third {
-  transform: translate3d(0%, -0.5%, 60px);
-  opacity: 1;
 }
 .view__box-text {
   position: absolute;
@@ -312,18 +287,15 @@ body {
   background-size: cover;
   opacity: 0;
   color: #8ab9e6;
-  transition: transform 1s, opacity 1s;
+  transition: opacity 1s;
 }
 .view__box-text--first {
-  transform: rotateY(-180deg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../image/building_mobile.jpg");
 }
 .view__box-text--second {
-  transform: rotateX(-180deg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../image/building2_mobile.jpg");
 }
 .view__box-text--third {
-  transform: rotate3d(0);
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../image/building3_mobile.jpg");
 }
 .view__box-img {
@@ -435,10 +407,6 @@ body {
   background-color: #4d6780;
   color: #fff;
 }
-.contact .message {
-  display: none;
-  text-transform: uppercase;
-}
 
 .footer {
   display: flex;
@@ -549,25 +517,58 @@ body {
     background-attachment: fixed;
   }
 
-  .view-text--first {
+  .view__box {
+    transition: transform 1s;
+  }
+  .view__box:hover .view__box-img--one {
+    transform: rotateY(180deg);
+    opacity: 0;
+  }
+  .view__box:hover .view__box-text--first {
+    transform: rotateY(0);
+    opacity: 1;
+  }
+  .view__box:hover .view__box-img--two {
+    transform: rotateX(180deg);
+    opacity: 0;
+  }
+  .view__box:hover .view__box-text--second {
+    transform: rotateX(0);
+    opacity: 1;
+  }
+  .view__box:hover .view__box-img--three {
+    transform: rotate3d(0);
+    opacity: 0;
+  }
+  .view__box:hover .view__box-text--third {
+    transform: translate3d(0%, -0.5%, 60px);
+    opacity: 1;
+  }
+  .view__box-text {
+    transition: transform 1s, opacity 1s;
+  }
+  .view__box-text--first {
     transform: rotateY(-180deg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../image/building.jpg");
   }
-  .view-text--second {
+  .view__box-text--second {
     transform: rotateX(-180deg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../image/building2.jpg");
   }
-  .view-text--third {
+  .view__box-text--third {
     transform: rotate3d(0);
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../image/building3.jpg");
   }
-  .view-text-img--one {
+  .view__box-text-img {
+    transition: transform 1s, opacity 1s;
+  }
+  .view__box-text-img--one {
     background-image: url("../image/building.jpg");
   }
-  .view-text-img--two {
+  .view__box-text-img--two {
     background-image: url("../image/building2.jpg");
   }
-  .view-text-img--three {
+  .view__box-text-img--three {
     background-image: url("../image/building3.jpg");
   }
 

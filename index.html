@@ -52,18 +52,18 @@
         <h2 class="section-title">gallery of<span class="section-title-decor"> work</span></h2>
         <div class="view__boxes">
 
-            <div class="view__box" id="view__box">
-                <div class="view__box-img view__box-img--one" onclick="void(0)"></div>
+            <div class="view__box" id="viewBox">
+                <div class="view__box-img view__box-img--one"></div>
                 <div class="view__box-text view__box-text--first"><p>nice card 1</p></div>    
             </div>
 
-            <div class="view__box" id="view__box">
-                <div class="view__box-img view__box-img--two" onclick="void(0)"></div>
+            <div class="view__box" id="viewBox">
+                <div class="view__box-img view__box-img--two"></div>
                  <div class="view__box-text view__box-text--second"><p>nice card 2</p></div>    
             </div>
 
-            <div class="view__box" id="view__box">
-                <div class="view__box-img view__box-img--three" onclick="void(0)"></div>
+            <div class="view__box" id="viewBox">
+                <div class="view__box-img view__box-img--three"></div>
                 <div class="view__box-text view__box-text--third"><p>nice card 3</p></div>    
             </div>
     </div>
@@ -83,7 +83,7 @@
         </div>
         <div class="hobby__box">
             <img src="./icon/vegetable.png" alt="" class="hobby__box-img">
-            <h5 class="hobby__box-title">vege food</h5>
+            <h5 class="hobby__box-title">vegefood</h5>  
         </div>
         <div class="hobby__box">
             <img src="./icon/digital-transformation.png" alt="" class="hobby__box-img">
@@ -99,20 +99,19 @@
     <div class="wrapper">
         <form id="contactForm" class="contact__form">
             <div class="contact__form-box contact__form-box--one">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <label for="from_name">Name:</label>
+                <input type="text" id="from_name" name="from_name" required>
             </div>
             <div class="contact__form-box contact__form-box--two">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" autocomplete="off" required>
             </div>
             <div class="contact__form-box contact__form-box--three">
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" required></textarea>
             </div>
-            <button class="contact__form-btn" type="submit">Send</button>
+            <input class="contact__form-btn" type="submit" id="button" value="Send">
         </form>
-        <div id="messageSent"  class="message">Send Succeed!</div>
     </div>
 </section>
 
@@ -136,7 +135,12 @@
 </footer>
 
 </main>
-    <script src="https://cdn.emailjs.com/sdk/2.6.4/email.min.js"></script>
+<script type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script type="text/javascript">
+emailjs.init('gp6u3oTSGd_eJDgX7')
+</script>
     <script src="./js/main.js"></script>
 </body>
 </html>

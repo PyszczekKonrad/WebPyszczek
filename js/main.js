@@ -58,27 +58,28 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('scroll', changeNavTextColor);
 });
 
+
 //form contact
+const btn = document.getElementById('button');
+
 document.getElementById('contactForm').addEventListener('submit', function(event) {
-  event.preventDefault(); 
-
-  var name = document.getElementById('name').value;
-  var email = document.getElementById('email').value;
-  var message = document.getElementById('message').value;
-
-
-  document.getElementById('contactForm').reset();
-
+  event.preventDefault();
   
-  emailjs.send('service_z7oyfvi', '__ejs-test-mail-service__', {
-    from_name: name,
-    from_email: email,
-    message: message
-  }).then(function(response) {
-    document.getElementById('messageSent').style.display = 'block';
-  }, function(error) {
-    console.error('Fail Send', error);
-  });
+  btn.value = 'Sending...';
+  
+  const serviceID = 'default_service';
+  const templateID = 'template_o8vl1tg';
+
+  emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send message';
+      alert('Thanks for subscribing to our mailing list!');
+
+      document.getElementById('contactForm').reset();
+    }, (err) => {
+      btn.value = 'Send message';
+      alert(JSON.stringify(err));
+    });
 });
 
 
@@ -101,6 +102,23 @@ window.addEventListener('scroll', () => {
 
   movingTitle.style.transform = `translate3d(+${right}px, 0px, 0px)`;
 });
+
+//animation for phone section view
+var viewBox = document.querySelector('.view__box');
+var viewBoxImg = viewBox.querySelector('.view__box-img');
+var viewBoxText = viewBox.querySelector('.view__box-text');
+
+viewBoxImg.addEventListener('click', function() {
+  viewBoxImg.classList.add('view__box-text--first');
+  viewBoxText.classList.remove('view__box-img--one');
+});
+
+viewBoxText.addEventListener('click', function() {
+  viewBoxImg.classList.toggle('view__box-text--first');
+  viewBoxText.classList.toggle('view__box-img--one');
+});
+
+
 
 
 /**
