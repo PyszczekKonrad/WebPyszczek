@@ -270,24 +270,24 @@ body {
   cursor: pointer;
   transition: opacity 1s;
 }
-.view__box:hover .view__box-img--one {
+.view__box.clicked .view__box-img--one {
   opacity: 0;
 }
-.view__box:hover .view__box-text--first {
+.view__box.clicked .view__box-text--first {
   opacity: 1;
   scale: 1.2;
 }
-.view__box:hover .view__box-img--two {
+.view__box.clicked .view__box-img--two {
   opacity: 0;
 }
-.view__box:hover .view__box-text--second {
+.view__box.clicked .view__box-text--second {
   opacity: 1;
   scale: 1.2;
 }
-.view__box:hover .view__box-img--three {
+.view__box.clicked .view__box-img--three {
   opacity: 0;
 }
-.view__box:hover .view__box-text--third {
+.view__box.clicked .view__box-text--third {
   opacity: 1;
   scale: 1.2;
 }
@@ -348,7 +348,7 @@ body {
   text-align: center;
   overflow: hidden;
   cursor: pointer;
-  transition: transform 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   animation: tilt-in-bottom-2 1s;
 }
 .hobby__box:hover {
@@ -530,29 +530,29 @@ body {
   }
 
   .view__box {
-    transition: transform 1s;
+    transition: transform 1s easy-in;
   }
-  .view__box:hover .view__box-img--one {
+  git .view__box:hover .view__box-img--one {
     transform: rotateY(180deg);
     opacity: 0;
   }
-  .view__box:hover .view__box-text--first {
+  git .view__box:hover .view__box-text--first {
     transform: rotateY(0);
     opacity: 1;
   }
-  .view__box:hover .view__box-img--two {
+  git .view__box:hover .view__box-img--two {
     transform: rotateX(180deg);
     opacity: 0;
   }
-  .view__box:hover .view__box-text--second {
+  git .view__box:hover .view__box-text--second {
     transform: rotateX(0);
     opacity: 1;
   }
-  .view__box:hover .view__box-img--three {
+  git .view__box:hover .view__box-img--three {
     transform: rotate3d(0);
     opacity: 0;
   }
-  .view__box:hover .view__box-text--third {
+  git .view__box:hover .view__box-text--third {
     transform: translate3d(0%, -0.5%, 60px);
     opacity: 1;
   }
@@ -664,11 +664,11 @@ body {
     transition: transform 1.4s ease;
     animation: none;
   }
-  .hobby__box:hover {
+  .hobby__box.clicked {
     transform: scale(1.2);
   }
-  .hobby__box:nth-child(2):hover, .hobby__box:nth-child(4):hover {
-    transform: scale(0.7);
+  .hobby__box:nth-child(2).clicked, .hobby__box:nth-child(4).clicked {
+    transform: scale(0.8);
   }
 }
 @media (max-width: 576px) {

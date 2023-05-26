@@ -151,7 +151,7 @@ body {
         cursor: pointer;
         transition: opacity 1s;
 
-        &:hover {
+        &.clicked {
             .view__box-img--one {
                 opacity: 0;
             }
@@ -251,7 +251,7 @@ body {
         text-align: center; 
         overflow: hidden;
         cursor: pointer;
-        transition: transform 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         animation: tilt-in-bottom-2 1s;
 
 
@@ -475,7 +475,7 @@ body {
 
     .view {
         &__box {
-            transition: transform 1s;
+            transition: transform 1s easy-in;git
 
             &:hover {
                 .view__box-img--one {
@@ -660,14 +660,14 @@ body {
             transition: transform 1.4s ease;
             animation: none;
         
-            &:hover {
+            &.clicked {
                 transform: scale(1.2);
             }
 
             &:nth-child(2),
             &:nth-child(4) {
-                &:hover {
-                    transform: scale(0.7);
+                &.clicked {
+                    transform: scale(0.8);
                 }
             }
         }
