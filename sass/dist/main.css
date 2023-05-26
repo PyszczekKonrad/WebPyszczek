@@ -177,13 +177,8 @@ body {
   text-transform: uppercase;
   transition: background-color 0.4s;
 }
-.nav__item:hover::before {
-  position: absolute;
-  bottom: 10px;
-  content: "";
-  height: 2px;
-  width: 50%;
-  background-color: #fff;
+.nav__item:hover {
+  background-color: #8ab9e6;
 }
 
 .header {
@@ -239,12 +234,13 @@ body {
 .info__about-text {
   display: flex;
   justify-content: end;
+  flex-direction: row;
   align-items: flex-end;
   padding: 1em;
-  font-size: 2.4rem;
+  font-size: 2.6rem;
 }
 .info__about-img {
-  width: 250vw;
+  width: 220vw;
   height: 500px;
   border-bottom: 5px solid black;
   border-left: 5px solid black;
@@ -272,6 +268,25 @@ body {
   height: 550px;
   perspective: 800px;
   cursor: pointer;
+  transition: opacity 1s;
+}
+.view__box:hover .view__box-img--one {
+  opacity: 0;
+}
+.view__box:hover .view__box-text--first {
+  opacity: 1;
+}
+.view__box:hover .view__box-img--two {
+  opacity: 0;
+}
+.view__box:hover .view__box-text--second {
+  opacity: 1;
+}
+.view__box:hover .view__box-img--three {
+  opacity: 0;
+}
+.view__box:hover .view__box-text--third {
+  opacity: 1;
 }
 .view__box-text {
   position: absolute;
@@ -330,11 +345,14 @@ body {
   text-align: center;
   overflow: hidden;
   cursor: pointer;
-  transition: transform 1.4s ease;
+  transition: transform 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   animation: tilt-in-bottom-2 1s;
 }
 .hobby__box:hover {
-  transform: rotateY(360deg) scale(1.4);
+  transform: translateY(-30px);
+}
+.hobby__box:nth-child(2):hover, .hobby__box:nth-child(4):hover {
+  transform: translateY(30px);
 }
 .hobby__box-title {
   font-size: 2.6rem;
@@ -503,15 +521,6 @@ body {
     padding: 6em 2em;
   }
 
-  .nav .nav__item:hover::before {
-    position: absolute;
-    bottom: 19px;
-    content: "";
-    height: 2px;
-    width: 40%;
-    background-color: #0289ad;
-  }
-
   .header {
     background-image: url("../image/hero_bg.jpg");
     background-attachment: fixed;
@@ -545,7 +554,7 @@ body {
     opacity: 1;
   }
   .view__box-text {
-    transition: transform 1s, opacity 1s;
+    transition: transform 0.9s, opacity 0.9s;
   }
   .view__box-text--first {
     transform: rotateY(-180deg);
@@ -655,14 +664,13 @@ body {
   .hobby__box:hover {
     transform: scale(1.2);
   }
+  .hobby__box:nth-child(2):hover, .hobby__box:nth-child(4):hover {
+    transform: scale(0.7);
+  }
 }
 @media (max-width: 576px) {
   .nav__item {
-    padding: 0.3em;
     font-size: 1.6rem;
-  }
-  .nav__item:hover::before {
-    bottom: 6px;
   }
 
   .info__about {
@@ -677,11 +685,11 @@ body {
   }
   .info__about-text {
     padding: 1em;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
   }
   .info__about-img {
-    width: 80vw;
-    height: 60vh;
+    width: 75vw;
+    height: 40vh;
     border: 4px solid black;
   }
 

@@ -103,24 +103,6 @@ window.addEventListener('scroll', () => {
   movingTitle.style.transform = `translate3d(+${right}px, 0px, 0px)`;
 });
 
-//animation for phone section view
-var viewBox = document.querySelector('.view__box');
-var viewBoxImg = viewBox.querySelector('.view__box-img');
-var viewBoxText = viewBox.querySelector('.view__box-text');
-
-viewBoxImg.addEventListener('click', function() {
-  viewBoxImg.classList.add('view__box-text--first');
-  viewBoxText.classList.remove('view__box-img--one');
-});
-
-viewBoxText.addEventListener('click', function() {
-  viewBoxImg.classList.toggle('view__box-text--first');
-  viewBoxText.classList.toggle('view__box-img--one');
-});
-
-
-
-
 /**
  * ----------------------------------------
  * Konrad Kukałowicz - author
