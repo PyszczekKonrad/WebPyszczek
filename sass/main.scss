@@ -158,6 +158,7 @@ body {
 
             .view__box-text--first {
                 opacity: 1;
+                scale: (1.2);
             }
 
             .view__box-img--two {
@@ -166,6 +167,7 @@ body {
 
             .view__box-text--second {
                 opacity: 1;
+                scale: (1.2);
             }
 
             .view__box-img--three {
@@ -174,6 +176,7 @@ body {
 
             .view__box-text--third {
                 opacity: 1;
+                scale: (1.2);
             }
         }
         
@@ -698,8 +701,8 @@ body {
             }
 
             &-img {
-                width: 75vw;
-                height: 40vh; 
+                width: 60vw;
+                height: 35vh; 
                 border: 4px solid black;
             }
         }  

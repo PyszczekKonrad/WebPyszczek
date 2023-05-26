@@ -275,18 +275,21 @@ body {
 }
 .view__box:hover .view__box-text--first {
   opacity: 1;
+  scale: 1.2;
 }
 .view__box:hover .view__box-img--two {
   opacity: 0;
 }
 .view__box:hover .view__box-text--second {
   opacity: 1;
+  scale: 1.2;
 }
 .view__box:hover .view__box-img--three {
   opacity: 0;
 }
 .view__box:hover .view__box-text--third {
   opacity: 1;
+  scale: 1.2;
 }
 .view__box-text {
   position: absolute;
@@ -688,8 +691,8 @@ body {
     font-size: 1.4rem;
   }
   .info__about-img {
-    width: 75vw;
-    height: 40vh;
+    width: 60vw;
+    height: 35vh;
     border: 4px solid black;
   }
 
