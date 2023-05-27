@@ -316,21 +316,21 @@ body {
   flex-direction: column;
 }
 .hobby__box {
-  padding: 0.7em;
-  height: 300px;
-  width: 200px;
+  padding: 0.2em;
+  height: 180px;
+  width: 100px;
   text-align: center;
   overflow: hidden;
   cursor: pointer;
   animation: tilt-in-bottom-2 1s;
 }
 .hobby__box-title {
-  font-size: 2.6rem;
+  font-size: 1.5rem;
   padding-top: 0.5em;
   line-height: 2.2px;
 }
 .hobby__box-img {
-  padding: 0.5em;
+  padding: 0.1em;
   height: 50%;
 }
 
@@ -550,7 +550,14 @@ body {
     background-image: url("../image/building3.jpg");
   }
 
+  .hobby__boxes {
+    flex-direction: row;
+    justify-content: space-between;
+  }
   .hobby__box {
+    height: 300px;
+    width: 220px;
+    padding: 0.6em;
     transition: box-shadow 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
   .hobby__box:hover {
@@ -558,6 +565,12 @@ body {
   }
   .hobby__box:nth-child(2):hover, .hobby__box:nth-child(4):hover {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  }
+  .hobby__box-title {
+    font-size: 2.6rem;
+  }
+  .hobby__box-img {
+    padding: 0.5em;
   }
 
   .contact {
@@ -585,11 +598,6 @@ body {
 .contact__form-box input,
 .contact__form-box textarea {
     padding: 1em;
-  }
-
-  .hobby__boxes {
-    flex-direction: row;
-    justify-content: space-between;
   }
 
   .info__about-title {
@@ -683,11 +691,12 @@ body {
 
   .info__about {
     flex-direction: column;
+    align-items: center;
     padding: 0.5em 0;
   }
   .info__about-title {
-    padding: 0.5em;
-    margin-left: 3em;
+    padding: 0.6em 2em;
+    margin-left: 3.1em;
     position: relative;
     font-size: 3.2rem;
   }

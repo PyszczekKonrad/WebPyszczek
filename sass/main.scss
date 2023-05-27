@@ -209,22 +209,22 @@ body {
     }
     
     &__box {
-        padding: 0.7em;
-        height: 300px;
-        width: 200px;
+        padding: 0.2em;
+        height: 180px;
+        width:100px;
         text-align: center; 
         overflow: hidden;
         cursor: pointer;
         animation: tilt-in-bottom-2 1s;
 
         &-title {
-            font-size: 2.6rem;
+            font-size: 1.5rem;
             padding-top: 0.5em;
             line-height: 2.2px;
         }
 
         &-img {
-            padding: 0.5em;
+            padding: 0.1em;
             height: 50%;
         }
     }
@@ -491,7 +491,14 @@ body {
         }
     }
     .hobby {
+        &__boxes { 
+            flex-direction: row;
+            justify-content: space-between;        
+        }
         &__box {
+            height: 300px;
+            width: 220px;
+            padding: 0.6em;
             transition: box-shadow 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         
             &:hover {
@@ -502,6 +509,12 @@ body {
                 &:hover {
                     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
                 }
+            }
+            &-title {
+                font-size: 2.6rem;
+            }
+            &-img {
+                padding: 0.5em;
             }
         }
     }
@@ -537,13 +550,6 @@ body {
                     padding: 1em;
                 }
             }
-        }
-    }
-
-    .hobby {
-        &__boxes { 
-            flex-direction: row;
-            justify-content: space-between;        
         }
     }
 
@@ -680,11 +686,12 @@ body {
     .info{
         &__about {
         flex-direction: column;
+        align-items: center;
         padding: 0.5em 0;
 
             &-title {
-            padding: 0.5em;
-            margin-left:3em;
+            padding: 0.6em 2em;
+            margin-left:3.1em;
             position: relative;
             font-size: 3.2rem;
             }   
