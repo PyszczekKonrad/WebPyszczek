@@ -59,6 +59,7 @@ body {
     background-image: url('../image/hero_bg_mobile.jpg');
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
     color: $pure-white;
 
      &__container {
@@ -423,6 +424,10 @@ body {
         padding: 6em 2em;
     }
 
+    .header {
+        background-image: url('../image/hero_bg.jpg');
+    }
+
     .view {
         &__box {
             transition: transform 1s easy-in;
@@ -575,6 +580,7 @@ body {
   
         &__item {
             font-size: 1.8rem;
+            padding: 0.5em;
         }
     }
 
@@ -719,7 +725,7 @@ body {
                 label,
                 input,
                 textarea{
-                    padding: 0.6em 0.8em;
+                    padding: 0.6em 0;
                 }
             }
         }
@@ -727,10 +733,6 @@ body {
 }
 
 @media (min-width:992px) {
-    .header {
-        background-image: url('../image/hero_bg.jpg');
-        background-attachment: fixed;
-    }
 
     .info{
         &__about {
