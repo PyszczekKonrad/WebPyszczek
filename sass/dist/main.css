@@ -186,18 +186,14 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
   padding: 2em;
   background-image: url("../image/hero_bg_mobile.jpg");
   background-position: center;
   background-size: cover;
-  background-attachment: fixed;
   color: #fff;
 }
 .header__container {
-  height: 40vh;
   max-width: 100vw;
-  background: none;
   overflow: hidden;
 }
 .header__title {
@@ -210,9 +206,9 @@ body {
   overflow: hidden;
 }
 .header__text {
-  padding-top: 3em;
+  padding-top: 2.8em;
   justify-content: flex-end;
-  font-size: 3.3rem;
+  font-size: 3.4rem;
   color: #fff;
   animation: bounce-in-bottom 11.2s forwards;
 }
@@ -253,16 +249,16 @@ body {
   z-index: 1;
 }
 
-.view {
+.gallery {
   background-color: #263340;
 }
-.view__boxes {
+.gallery__boxes {
   padding: 2em;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.view__box {
+.gallery__box {
   position: relative;
   margin: 10px 20px;
   width: 450px;
@@ -270,7 +266,7 @@ body {
   perspective: 800px;
   cursor: pointer;
 }
-.view__box-text {
+.gallery__box-text {
   position: absolute;
   top: 0;
   left: 0;
@@ -286,16 +282,16 @@ body {
   color: #8ab9e6;
   transition: opacity 1s;
 }
-.view__box-text--first {
+.gallery__box-text--first {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../image/building_mobile.jpg");
 }
-.view__box-text--second {
+.gallery__box-text--second {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../image/building2_mobile.jpg");
 }
-.view__box-text--third {
+.gallery__box-text--third {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../image/building3_mobile.jpg");
 }
-.view__box-img {
+.gallery__box-img {
   width: 100%;
   height: 100%;
   background-position: center;
@@ -303,13 +299,13 @@ body {
   border-radius: 15px;
   transition: transform 1s;
 }
-.view__box-img--one {
+.gallery__box-img--one {
   background-image: url("../image/building_mobile.jpg");
 }
-.view__box-img--two {
+.gallery__box-img--two {
   background-image: url("../image/building2_mobile.jpg");
 }
-.view__box-img--three {
+.gallery__box-img--three {
   background-image: url("../image/building3_mobile.jpg");
 }
 
@@ -370,7 +366,7 @@ body {
   border: none;
   border-radius: 8px;
   font-weight: bold;
-  font-size: 2.8rem;
+  font-size: 2.3rem;
   margin-bottom: 0.5em;
   color: #8ab9e6;
 }
@@ -499,58 +495,58 @@ body {
     background-image: url("../image/hero_bg.jpg");
   }
 
-  .view__box {
+  .gallery__box {
     transition: transform 1s easy-in;
   }
-  .view__box:hover .view__box-img--one {
+  .gallery__box:hover .gallery__box-img--one {
     transform: rotateY(180deg);
     opacity: 0;
   }
-  .view__box:hover .view__box-text--first {
+  .gallery__box:hover .gallery__box-text--first {
     transform: rotateY(0);
     opacity: 1;
   }
-  .view__box:hover .view__box-img--two {
+  .gallery__box:hover .gallery__box-img--two {
     transform: rotateX(180deg);
     opacity: 0;
   }
-  .view__box:hover .view__box-text--second {
+  .gallery__box:hover .gallery__box-text--second {
     transform: rotateX(0);
     opacity: 1;
   }
-  .view__box:hover .view__box-img--three {
+  .gallery__box:hover .gallery__box-img--three {
     transform: rotate3d(0);
     opacity: 0;
   }
-  .view__box:hover .view__box-text--third {
+  .gallery__box:hover .gallery__box-text--third {
     transform: translate3d(0%, -0.5%, 60px);
     opacity: 1;
   }
-  .view__box-text {
+  .gallery__box-text {
     transition: transform 0.9s, opacity 0.9s;
   }
-  .view__box-text--first {
+  .gallery__box-text--first {
     transform: rotateY(-180deg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../image/building.jpg");
   }
-  .view__box-text--second {
+  .gallery__box-text--second {
     transform: rotateX(-180deg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../image/building2.jpg");
   }
-  .view__box-text--third {
+  .gallery__box-text--third {
     transform: rotate3d(0);
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../image/building3.jpg");
   }
-  .view__box-text-img {
+  .gallery__box-text-img {
     transition: transform 1s, opacity 1s;
   }
-  .view__box-text-img--one {
+  .gallery__box-text-img--one {
     background-image: url("../image/building.jpg");
   }
-  .view__box-text-img--two {
+  .gallery__box-text-img--two {
     background-image: url("../image/building2.jpg");
   }
-  .view__box-text-img--three {
+  .gallery__box-text-img--three {
     background-image: url("../image/building3.jpg");
   }
 
@@ -601,6 +597,12 @@ body {
     right: 90%;
     font-size: 3.6rem;
   }
+
+  .contact__form-box label,
+.contact__form-box input,
+.contact__form-box textarea {
+    padding: 0.6em 0;
+  }
 }
 @media (max-width: 768px) {
   html {
@@ -619,34 +621,34 @@ body {
     padding-top: 7em;
   }
 
-  .view__boxes {
+  .gallery__boxes {
     padding: 3em;
     flex-direction: column;
   }
-  .view__box {
+  .gallery__box {
     padding: 2.4em 1em;
     width: 400px;
     height: 500px;
     transition: scale 1s, opacity 1s;
   }
-  .view__box.clicked .view__box-img--one {
+  .gallery__box.clicked .gallery__box-img--one {
     opacity: 0;
   }
-  .view__box.clicked .view__box-text--first {
+  .gallery__box.clicked .gallery__box-text--first {
     opacity: 1;
     scale: 1;
   }
-  .view__box.clicked .view__box-img--two {
+  .gallery__box.clicked .gallery__box-img--two {
     opacity: 0;
   }
-  .view__box.clicked .view__box-text--second {
+  .gallery__box.clicked .gallery__box-text--second {
     opacity: 1;
     scale: 1;
   }
-  .view__box.clicked .view__box-img--three {
+  .gallery__box.clicked .gallery__box-img--three {
     opacity: 0;
   }
-  .view__box.clicked .view__box-text--third {
+  .gallery__box.clicked .gallery__box-text--third {
     opacity: 1;
     scale: 1;
   }
@@ -704,7 +706,7 @@ body {
     font-size: 2.8rem;
   }
 
-  .view__box {
+  .gallery__box {
     padding: 1em;
     width: 300px;
     height: 400px;
@@ -745,6 +747,10 @@ body {
   }
   .info__about__text {
     padding: 2.5em;
+  }
+
+  .contact__form-box label {
+    font-size: 2.8rem;
   }
 }
 /**
