@@ -198,7 +198,7 @@ body {
 }
 .header__title {
   display: inline-block;
-  font-size: 20vw;
+  font-size: 13.5vw;
   font-weight: 500;
   color: #fff;
   text-transform: uppercase;
@@ -318,20 +318,43 @@ body {
 .hobby__box {
   padding: 0.2em;
   height: 180px;
-  width: 100px;
+  width: 110px;
   text-align: center;
   overflow: hidden;
   cursor: pointer;
   animation: tilt-in-bottom-2 1s;
+}
+.hobby__box:hover .hobby__box-img {
+  transform: rotateY(360deg);
 }
 .hobby__box-title {
   font-size: 1.5rem;
   padding-top: 0.5em;
   line-height: 2.2px;
 }
+.hobby__box-text {
+  padding-top: 1em;
+  font-size: 0.9rem;
+  text-align: center;
+  display: none;
+}
+.hobby__box-icon {
+  height: 60%;
+  position: relative;
+  overflow: hidden;
+  perspective: 1000px;
+}
 .hobby__box-img {
-  padding: 0.1em;
-  height: 50%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: center;
+  transition: transform 1.2s;
+}
+.hobby__box.clicked .hobby__box-text {
+  display: block;
 }
 
 .contact {
@@ -346,15 +369,15 @@ body {
   text-transform: uppercase;
   overflow: hidden;
 }
-.contact__form-box--one {
+.contact__form-box--name {
   grid-column: 1/-1;
   grid-row: 1/2;
 }
-.contact__form-box--two {
+.contact__form-box--email {
   grid-column: 1/-1;
   grid-row: 2/3;
 }
-.contact__form-box--three {
+.contact__form-box--message {
   grid-column: 1/-1;
   grid-row: 3/4;
 }
@@ -375,7 +398,7 @@ body {
   max-width: 100%;
   min-width: 100%;
   width: 100%;
-  min-height: 150px;
+  min-height: 50%;
 }
 .contact__form-btn {
   grid-column: 1/3;
@@ -555,39 +578,36 @@ body {
     justify-content: space-between;
   }
   .hobby__box {
-    height: 300px;
-    width: 220px;
+    height: 280px;
+    width: 200px;
     padding: 0.6em;
-    transition: box-shadow 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
-  .hobby__box:hover {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-  }
-  .hobby__box:nth-child(2):hover, .hobby__box:nth-child(4):hover {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
   }
   .hobby__box-title {
     font-size: 2.6rem;
   }
   .hobby__box-img {
-    padding: 0.5em;
+    padding: 1.4em;
+  }
+  .hobby__box-text {
+    padding-top: 2em;
+    font-size: 1.5rem;
   }
 
   .contact {
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../image/bg_contact.jpg");
   }
   .contact__form {
-    gap: 40px;
+    gap: 20px;
   }
-  .contact__form-box--one {
+  .contact__form-box--name {
     grid-column: 1/4;
     grid-row: 1/2;
   }
-  .contact__form-box--two {
+  .contact__form-box--email {
     grid-column: 4/7;
     grid-row: 1/2;
   }
-  .contact__form-box--three {
+  .contact__form-box--message {
     grid-column: 1/-1;
     grid-row: 2/3;
   }
@@ -599,17 +619,14 @@ body {
 .contact__form-box textarea {
     padding: 1em;
   }
+  .contact__form-box textarea {
+    min-height: 130px;
+  }
 
   .info__about-title {
     top: 25%;
     right: 90%;
     font-size: 3.6rem;
-  }
-
-  .contact__form-box label,
-.contact__form-box input,
-.contact__form-box textarea {
-    padding: 0.6em 0;
   }
 }
 @media (max-width: 768px) {
@@ -630,13 +647,13 @@ body {
   }
 
   .gallery__boxes {
-    padding: 3em;
+    padding: 2em;
     flex-direction: column;
   }
   .gallery__box {
-    padding: 2.4em 1em;
-    width: 400px;
-    height: 500px;
+    padding: 1em 0;
+    width: 200px;
+    height: 310px;
     transition: scale 1s, opacity 1s;
   }
   .gallery__box.clicked .gallery__box-img--one {
@@ -673,15 +690,23 @@ body {
     font-size: 1.4rem;
   }
 
-  .hobby__box {
-    transition: scale 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    animation: none;
+  .contact__form-box--name {
+    grid-column: 1/4;
+    grid-row: 1/2;
   }
-  .hobby__box.clicked {
-    scale: 1.1;
+  .contact__form-box--email {
+    grid-column: 4/7;
+    grid-row: 1/2;
   }
-  .hobby__box:nth-child(2).clicked, .hobby__box:nth-child(4).clicked {
-    scale: 0.9;
+  .contact__form-box label,
+.contact__form-box input,
+.contact__form-box textarea {
+    font-size: 1.4rem;
+    margin-bottom: 0.5em;
+  }
+  .contact__form-btn {
+    font-size: 1rem;
+    width: 80%;
   }
 }
 @media (max-width: 576px) {
@@ -716,15 +741,15 @@ body {
   }
 
   .gallery__box {
-    padding: 1em;
-    width: 300px;
-    height: 400px;
+    padding: 0.5em;
+    width: 200px;
+    height: 220px;
   }
 
   .contact__form-box label,
 .contact__form-box input,
 .contact__form-box textarea {
-    padding: 0.6em 0;
+    padding: 0.6em 0.1em;
   }
 }
 @media (min-width: 992px) {
