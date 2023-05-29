@@ -679,16 +679,6 @@ body {
     .contact {
         &__form {
             &-box {
-                &--name {
-                    grid-column: 1/4;
-                    grid-row: 1/2;
-                }
-            
-                &--email {
-                    grid-column: 4/7;
-                    grid-row: 1/2;
-                }
-
                 label,
                 input,
                 textarea{
@@ -758,7 +748,7 @@ body {
                 label,
                 input,
                 textarea{
-                    padding: 0.6em 0em;
+                    padding: 0.6em 0.1em;
                 }
             }
         }
@@ -789,6 +779,24 @@ body {
         }
         &__social {
             padding: 0.5em;
+        }
+    }
+}
+
+@media (min-width:576px) {
+    .contact{
+        &__form {
+            &-box {
+                &--name {
+                    grid-column: 1/4;
+                    grid-row: 1/2;
+                }
+                
+                &--email {
+                    grid-column: 4/7;
+                    grid-row: 1/2;
+                }
+            }
         }
     }
 }
