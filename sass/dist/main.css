@@ -749,7 +749,7 @@ body {
   .contact__form-box label,
 .contact__form-box input,
 .contact__form-box textarea {
-    padding: 0.6em 0.1em;
+    padding: 0.6em 0em;
   }
 }
 @media (min-width: 992px) {
