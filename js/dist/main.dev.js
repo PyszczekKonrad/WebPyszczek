@@ -28,17 +28,13 @@ document.addEventListener('DOMContentLoaded', function () {
     for (var i = 0; i < navItems.length; i++) {
       var navItem = navItems[i];
 
-      if (isMobile) {
+      if (isMobile || scrollPosition > 768) {
         nav.style.backgroundColor = 'rgb(2, 137, 173)';
         navItem.style.color = 'white';
       } else {
         nav.style.backgroundColor = '';
 
         if (scrollPosition > 3605) {
-          navItem.style.color = '';
-        } else if (scrollPosition > 2816) {
-          navItem.style.color = 'rgb(2, 137, 173)';
-        } else if (scrollPosition > 1584) {
           navItem.style.color = '';
         } else if (scrollPosition > 712) {
           navItem.style.color = 'rgb(2, 137, 173)';
@@ -54,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   window.addEventListener('scroll', changeNavTextColor);
+  window.addEventListener('resize', changeNavTextColor);
 }); //form contact
 
 var btn = document.getElementById('button');
@@ -75,8 +72,8 @@ document.getElementById('contactForm').addEventListener('submit', function (even
 window.addEventListener('scroll', function () {
   var movingTitle = document.getElementById("movingTitle");
   var scrolled = window.pageYOffset;
-  var startScroll = 240;
-  var maxScroll = 900;
+  var startScroll = 20;
+  var maxScroll = 800;
   var right = 0;
 
   if (window.innerWidth >= 576) {

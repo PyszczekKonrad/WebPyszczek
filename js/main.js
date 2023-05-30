@@ -1,4 +1,3 @@
-
 //header text 
 window.addEventListener('scroll', () => {
     const movingText = document.getElementById("movingText");
@@ -25,22 +24,17 @@ document.addEventListener('DOMContentLoaded', function() {
   function changeNavTextColor() {
     var scrollPosition = window.scrollY;
 
-  
-    var isMobile = window.innerWidth <= 768; 
+    var isMobile = window.innerWidth <= 768;
 
     for (var i = 0; i < navItems.length; i++) {
       var navItem = navItems[i];
 
-      if (isMobile) {
-        nav.style.backgroundColor = 'rgb(2, 137, 173)'; 
+      if (isMobile || scrollPosition > 768) {
+        nav.style.backgroundColor = 'rgb(2, 137, 173)';
         navItem.style.color = 'white';
       } else {
-        nav.style.backgroundColor = ''; 
+        nav.style.backgroundColor = '';
         if (scrollPosition > 3605) {
-          navItem.style.color = '';
-        } else if (scrollPosition > 2816) {
-          navItem.style.color = 'rgb(2, 137, 173)';
-        } else if (scrollPosition > 1584) {
           navItem.style.color = '';
         } else if (scrollPosition > 712) {
           navItem.style.color = 'rgb(2, 137, 173)';
@@ -56,7 +50,9 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   window.addEventListener('scroll', changeNavTextColor);
+  window.addEventListener('resize', changeNavTextColor);
 });
+
 
 
 //form contact
@@ -88,8 +84,8 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 window.addEventListener('scroll', () => {
   const movingTitle = document.getElementById("movingTitle");
   const scrolled = window.pageYOffset;
-  const startScroll = 240;
-  const maxScroll = 900; 
+  const startScroll = 20;
+  const maxScroll = 800; 
   let right = 0;
 
   if (window.innerWidth >= 576) { 
