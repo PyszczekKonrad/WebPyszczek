@@ -6,7 +6,7 @@
 }
 
 .section {
-  padding: 2em 1em;
+  padding: 10em 2em;
 }
 
 .section-title {
@@ -186,7 +186,6 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 2em;
   background-image: url("../image/hero_bg_mobile.jpg");
   background-position: center;
   background-size: cover;
@@ -215,7 +214,7 @@ body {
 
 .info__about {
   position: relative;
-  padding: 6em 0;
+  padding: 7em 0;
   display: flex;
 }
 .info__about-title {
@@ -508,10 +507,6 @@ body {
   .section-title {
     padding: 2em 0;
     font-size: 5.4rem;
-  }
-
-  .section {
-    padding: 6em 2em;
   }
 
   .header {

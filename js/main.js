@@ -19,15 +19,15 @@ handlePresentYear();
 //navigation scroll
 document.addEventListener('DOMContentLoaded', function() {
   var nav = document.querySelector('.nav');
-  var navItems = document.querySelectorAll('.nav__item');
+  const navItems = document.querySelectorAll('.nav__item');
 
   function changeNavTextColor() {
-    var scrollPosition = window.scrollY;
+    const scrollPosition = window.scrollY;
 
-    var isMobile = window.innerWidth <= 768;
+    const isMobile = window.innerWidth <= 768;
 
     for (var i = 0; i < navItems.length; i++) {
-      var navItem = navItems[i];
+      const navItem = navItems[i];
 
       if (isMobile || scrollPosition > 768) {
         nav.style.backgroundColor = 'rgb(2, 137, 173)';
@@ -84,15 +84,15 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 window.addEventListener('scroll', () => {
   const movingTitle = document.getElementById("movingTitle");
   const scrolled = window.pageYOffset;
-  const startScroll = 20;
-  const maxScroll = 800; 
+  const startScroll = 50;
+  const maxScroll = 650; 
   let right = 0;
 
   if (window.innerWidth >= 576) { 
     if (scrolled >= startScroll && scrolled <= maxScroll) {
-      right = (scrolled - startScroll) * 1;
+      right = (scrolled - startScroll) * 1
     } else if (scrolled > maxScroll) {
-      right = (maxScroll - startScroll) * 1;
+      right = (maxScroll - startScroll) * 1
     }
   }
 

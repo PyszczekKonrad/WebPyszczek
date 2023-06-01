@@ -72,8 +72,8 @@ document.getElementById('contactForm').addEventListener('submit', function (even
 window.addEventListener('scroll', function () {
   var movingTitle = document.getElementById("movingTitle");
   var scrolled = window.pageYOffset;
-  var startScroll = 20;
-  var maxScroll = 800;
+  var startScroll = 50;
+  var maxScroll = 650;
   var right = 0;
 
   if (window.innerWidth >= 576) {
