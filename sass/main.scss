@@ -21,6 +21,11 @@ body {
     font-size: 1.6rem;  
 }
 
+a {
+    text-decoration: none;
+    color: $pure-white;
+}
+
 //NAVIGATION
 .nav {
     display: flex;
@@ -49,6 +54,7 @@ body {
 
 //HEADER 
 .header {
+    
     position: relative;
     display: flex;
     align-items: center;
@@ -753,7 +759,6 @@ body {
             }   
             
             &-text {
-                padding: 1em;
                 font-size: 2.4rem;
             }
         }
